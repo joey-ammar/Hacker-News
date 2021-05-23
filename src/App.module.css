@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #e8e7d2;
+}
+
+/*
+  Loading
+*/
+.Loading {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.Container,
+.News {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.Container i {
+  font-size: 2rem;
+  color: #334b5c;
+}
+.Container h1 {
+  color: #334b5c;
+  margin: 0.4rem 0rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/*
+  No news
+*/
+.NewsInside h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}

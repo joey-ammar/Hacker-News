@@ -1,0 +1,36 @@
+.inputWrapper {
+  width: 100%;
+}
+.insideInputWrapper {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+}
+.insideInputWrapper input {
+  padding: 0.6rem 0.5rem;
+  background-color: transparent;
+  border: 1px solid #334b5c;
+  outline: none;
+  width: 20%;
+}
+.btn1 {
+  border: 1px solid #334b5c;
+  background-color: #334b5c;
+  color: #e8e7d2;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+::placeholder {
+  margin-right: 1rem;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .insideInputWrapper input {
+    width: 80%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  .insideInputWrapper input {
+    width: 80%;
+  }
+}
