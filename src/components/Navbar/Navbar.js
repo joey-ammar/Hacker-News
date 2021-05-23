@@ -5,7 +5,6 @@ import classes from "./Navbar.module.css";
 const Navbar = () => {
   /*Handle togle */
   const [isToggled, setToggled] = useState(false);
-  const [isDisplayed, setDisplayed] = useState("none");
   //   const inputRef = React.useRef();
   //   console.log(inputRef);
 
@@ -50,9 +49,13 @@ const Navbar = () => {
           {/* Right part of the Nav */}
           <div className={classes.NavbarRight}>
             <div>
-              <a className={classes.login}>Login</a>
-              <a className={classes.register}>Register</a>
-              <a onClick={toggleSwitch} className={classes.Bars}>
+              <a href="/#" className={classes.login}>
+                Login
+              </a>
+              <a href="/#" className={classes.register}>
+                Register
+              </a>
+              <a href="/#" onClick={toggleSwitch} className={classes.Bars}>
                 <i className="fas fa-bars"></i>
               </a>
             </div>

@@ -22,14 +22,20 @@ const App = () => {
   /**
    * useEffect
    */
-  useEffect(async () => {
-    setLoader(true);
-    /**Axios call of API */
-    await axios
-      .get(`http://hn.algolia.com/api/v1/search?query=${inputValue}&tags=story`)
-      .then((response) => setData(response.data.hits))
-      .catch((err) => console.log(err));
-    setLoader(false);
+
+  useEffect(() => {
+    const axFnx = async () => {
+      setLoader(true);
+      /**Axios call of API */
+      await axios
+        .get(
+          `http://hn.algolia.com/api/v1/search?query=${inputValue}&tags=story`
+        )
+        .then((response) => setData(response.data.hits))
+        .catch((err) => console.log(err));
+      setLoader(false);
+    };
+    axFnx();
   }, [inputValue]);
   // console.log(inputValue);
   // console.log(data);
@@ -45,7 +51,7 @@ const App = () => {
 
           <div className={classes.Loading}>
             <div className={classes.Container}>
-              <i class="fas fa-spinner"></i>
+              <i className="fas fa-spinner"></i>
               <h1>Loading</h1>
             </div>
           </div>
@@ -66,7 +72,7 @@ const App = () => {
           ) : (
             <>
               <div className={classes.News}>
-                <div class={classes.NewsInside}>
+                <div className={classes.NewsInside}>
                   <h1>No News Found</h1>
                 </div>
               </div>
