@@ -29,7 +29,7 @@ const App = () => {
       /**Axios call of API */
       await axios
         .get(
-          `http://hn.algolia.com/api/v1/search?query=${inputValue}&tags=story`
+          `https://hn.algolia.com/api/v1/search?query=${inputValue}&tags=story`
         )
         .then((response) => setData(response.data.hits))
         .catch((err) => console.log(err));
